@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-export function Example() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0);
+const Example = () => {
+    const [count,setCount]=useState(0);
+
+const increment=()=>{
+    // setCount(count+1)
+    // setCount((prevCount)=>{
+    //     return prevCount+1;
+    // })
+    setCount((prevCount)=>prevCount+1);
+    setCount((prevCount)=>prevCount+1);
+    
+}
+const decrement=()=>{
+    // setCount(count-1)
+    // setCount((prevCount)=>{
+    //     return prevCount-1;
+    // })
+    setCount((prevCount)=>prevCount-1);
+}
+
   return (
     <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
+      <button onClick={increment}>Inc(+)</button>
+      <span> <b>{count}</b> </span>
+      <button onClick={decrement}>Dec(-)</button>
     </div>
-  );
+  )
 }
+
+export default Example

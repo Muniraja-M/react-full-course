@@ -1,14 +1,14 @@
-import React from "react";
-import { Example } from "./useState";
-function App() {
+import React from 'react'
+import Example from './useState'
+
+const App = () => {
   return (
-    <div className="App">
-      <center>
-      <h3> Hi React Full Course</h3>
-      <Example/>
-      </center>
+    <div> <center>
+    <h3> Hi React Full Course</h3>
+    <Example/>
+    </center>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
